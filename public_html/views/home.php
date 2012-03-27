@@ -46,11 +46,13 @@
 	</script>
 </head>
 <body>
-	<?php
-	if(isset($status) && $status == "success"): ?>
-		<input type="text" name="" placeholder="" value="<?=$url?>" /> 
-	<?php 
-	endif; ?>
+	<div id="yourUrl">
+		<?php
+		if(isset($status) && $status == "success"): ?>
+			<input type="text" name="" placeholder="" value="<?=$url?>" /> 
+		<?php 
+		endif; ?>
+	</div>
 	<form method="POST" action="/" name="makeMessage">
 		<input type="hidden" name="hasSent" value="false">
 		<textarea name="fancyMessage" placeholder="message"></textarea>

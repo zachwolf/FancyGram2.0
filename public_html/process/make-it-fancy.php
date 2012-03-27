@@ -21,10 +21,9 @@ if(isset($message) && $message != "") {
 } else {
 
 	$formData[status] 	= "failure";
+	$formData[message] 	= "A please enter a message.";
 
 }
-
-$formData[test] 	= "asdf";
 
 $json 				= json_encode($formData);
 

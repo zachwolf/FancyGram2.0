@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+<?php
+	if(isset($_POST['hasSent'])):
+		$_POST['hasSent'];
+
+		$path 	= $_SERVER['DOCUMENT_ROOT'];
+		$path  .= "/process/make-it-fancy.php";
+
+		$url 	= include_once($path);
+		$json 	= json_decode($url, true);
+
+		$status = $json[status];
+		$url 	= $json[url];
+	endif;
+?><!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -20,8 +33,6 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
-	<script type="text/javascript" src="/js/app.js"></script>
-
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-30310931-1']);
@@ -35,6 +46,29 @@
 	</script>
 </head>
 <body>
-	asdfasdfasdf
+	<?php
+	if(isset($status) && $status == "success"): ?>
+		<input type="text" name="" placeholder="" value="<?=$url?>" /> 
+	<?php 
+	endif; ?>
+	<form method="POST" action="/" name="makeMessage">
+		<input type="hidden" name="hasSent" value="false">
+		<textarea name="fancyMessage" placeholder="message"></textarea>
+		<fieldset>
+			<input type="radio" name="messageTheme" value="1" checked>
+			<label>Option 1</label>
+			<input type="radio" name="messageTheme" value="2">
+			<label>Option 2</label>
+			<input type="radio" name="messageTheme" value="3"> 
+			<label>Option 3</label>
+		</fieldset>
+		<input type="submit" value="Fancify!">
+	</form>
+	<?php
+	if(isset($status) && $status == "failure"):
+		echo "please enter a message";
+	endif;
+	?>
+<script type="text/javascript" src="/js/app.js"></script>
 </body>
 </html>

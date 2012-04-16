@@ -1,1 +1,3 @@
-this is the theme
+<?php
+
+echo $message;

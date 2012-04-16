@@ -1,11 +1,25 @@
 <?php
-$themes = Array("test", "cats");
-	ob_start();
-	include('/theme/themes.php');
-	ob_end_clean();
 
-	$message 	= $_GET['message'];
-	$theme		= $themes[$_GET['t']];
+
+	include('themes.php');	
+
+	$theme 		= $themes[$_GET['t']];
+	$message 	= $_GET['m'];
+
+	$dir		= '../theme/' . $theme . '/';
+
+	if(is_dir($dir)) {
+		ob_start();
+		include($dir . 'content.php');
+		$content = ob_get_clean();
+	}
+
+	if(!isset($message) || $message == "") {
+		header('Location: ../error/no-message.php');
+	} else if(!isset($theme) || $theme == "") {
+		header('Location: ../error/no-theme.php?m=' . $message);
+	}
+
 
 ?><!DOCTYPE html>
 <html>
@@ -43,11 +57,6 @@ $themes = Array("test", "cats");
 	</script>
 </head>
 <body>
-	<?php
-	print_r($themes);
-	
-		// echo "message: " . $message . " file: " . $var;
-	?>
 	<?=$content?>
 </body>
 </html>

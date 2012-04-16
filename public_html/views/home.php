@@ -54,14 +54,18 @@
 		endif; ?>
 	</div>
 	<form method="POST" action="/" name="makeMessage">
-		<input type="hidden" name="hasSent" value="false">
-		<textarea name="fancyMessage" placeholder="message"></textarea>
 		<fieldset>
-			<input type="radio" name="messageTheme" value="1" checked>
+			<legend>Message:</legend>
+			<input type="hidden" name="hasSent" value="false">
+			<textarea name="fancyMessage" placeholder="message"></textarea>			
+		</fieldset>
+		<fieldset>
+			<legend>Display Settings:</legend>
+			<input type="radio" name="messageTheme" value="0" checked>
 			<label>Option 1</label>
-			<input type="radio" name="messageTheme" value="2">
+			<input type="radio" name="messageTheme" value="1">
 			<label>Option 2</label>
-			<input type="radio" name="messageTheme" value="3"> 
+			<input type="radio" name="messageTheme" value="2"> 
 			<label>Option 3</label>
 		</fieldset>
 		<input type="submit" value="Fancify!">

@@ -21,9 +21,9 @@ body {
 }
 
 .body-wrap {
-	background: url($img-paper2);
-	margin: 55px 4.2553191%; // 40/940
-	padding: 24px 10.4255319%; // 98/940
+	background: url($img-paper2) #F2F0EE;
+	margin: 55px 4.2553191%; 	// 40/940
+	padding: 24px 10.4255319%; 	// 98/940
 	padding-bottom: 121px;
 	position: relative;
 	z-index: 0;
@@ -262,6 +262,9 @@ legend {
 	&:active,
 	&.active,
 	&:disabled {
+
+		@include backface-visibility(visible);
+
 		@include line-height(5.1rem);
 		@include background-image(linear-gradient(hsl(0,0,88), #E8E8E8));
 
@@ -280,32 +283,10 @@ legend {
 	}
 }
 
-#yourUrl {
-	@include transformThis(-3.25deg);
-
-	text-align: center;
-	display: block;
-	max-width: 940px;
-	height: 379px;
-	background: url("/img/groovepaper.png");
-	margin: 53px auto -433px auto;
-}
-
 .sexy-shadow {
 	@include box-shadow(0 0 10px rgba(#000, .5));
 }
 
-.post-card {
-	@include font(1.8rem, 2.7rem, $font-WisdomScript);
-	@include transformThis(-3.25deg);
-
-	font-family: $font-WisdomScript;
-	background: url("/img/paper.png");
-	margin: -122px auto 40px auto;
-	width: 487px;
-	height: 289px;
-	padding: 18px;
-}
 
 .side {
 	width: 50%;
@@ -340,6 +321,28 @@ legend {
 	}
 }
 
+.post-card {
+	@include font(1.8rem, 2.7rem, $font-WisdomScript);
+	@include transformThis(-3.25deg);
+
+	font-family: $font-WisdomScript;
+	background: url("/img/paper.png") #fff;
+	margin: -122px auto 40px auto;
+	width: 487px;
+	height: 289px;
+	padding: 18px;
+}
+
+#yourUrl {
+	@include transformThis(-3.25deg);
+
+	text-align: center;
+	display: block;
+	max-width: 940px;
+	height: 379px;
+	background: url("/img/groovepaper.png") #fff;
+	margin: 53px auto -433px auto;
+}
 
 @import "mediaQueries/mediaQueries";
 

@@ -14,8 +14,10 @@
 }
 
 @mixin transformThis($angle: 3.5deg) {
+//	backface-visibility:hidden;
+//	-webkit-backface-visibility: visible; /* Chrome and Safari */
+//	-webkit-backface-visibility: hidden;
 	-webkit-transform: rotate(#{$angle});
 	-moz-transform: rotate(#{$angle});
 	-o-transform: rotate(#{$angle});
-	-webkit-backface-visibility: hidden;
 }

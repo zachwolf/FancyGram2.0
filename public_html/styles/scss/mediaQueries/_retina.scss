@@ -1,0 +1,45 @@
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+only screen and (-o-min-device-pixel-ratio: 3/2), 
+only screen and (min--moz-device-pixel-ratio: 1.5), 
+only screen and (min-device-pixel-ratio: 1.5) { 
+
+	$logo: 			"/img/fancy_gram_logo@2x.png";
+
+	$logo-acnt: 	"/img/logo-accent@2x.png";
+
+	html {
+		font-size: 100%;
+		background-size: 200px 200px;
+	}
+
+	.body-wrap {
+		background-size: 50%;
+	}
+
+	.logo {
+		background: url($logo) no-repeat top center;
+		background-size: 100%;
+	}
+	.logo-accent {
+		background: url($logo-acnt) bottom center no-repeat;
+		background-size: auto 6px;
+	}
+
+	body {
+		background-size: 100%;
+	}
+
+	.body-wrap {
+		background-size: 250px 250px;
+	}
+
+	#yourUrl {
+		background: url("/img/groovepaper.png");
+		background-size: 150px 150px;
+	}
+
+	.post-card {
+		background-size: 250px 296px;
+//		500 × 593
+	}
+}

@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'HaymakerRegular';
+    src: url('/fonts/haymaker-webfont.eot');
+    src: url('/fonts/haymaker-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/haymaker-webfont.woff') format('woff'),
+         url('/fonts/haymaker-webfont.ttf') format('truetype'),
+         url('/fonts/haymaker-webfont.svg#HaymakerRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'WisdomScriptAI';
+    src: url('/fonts/wisdomscript.eot');
+    src: url('/fonts/wisdomscript.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/wisdomscript.woff') format('woff'),
+         url('/fonts/wisdomscript.ttf') format('truetype'),
+         url('/fonts/wisdomscript.svg#wisdomscript') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-haymaker: 	"HaymakerRegular", serif;
+
+$font-WisdomScript: "WisdomScriptAI";
+
+$c-text-d: 	#403F3B !default;

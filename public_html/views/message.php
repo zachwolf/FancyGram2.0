@@ -1,7 +1,6 @@
 <?php
-$themes = Array("test", "cats");
 	ob_start();
-	include('/theme/themes.php');
+	include('../themes.php');
 	ob_end_clean();
 
 	$message 	= $_GET['message'];

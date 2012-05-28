@@ -1,10 +1,9 @@
 <?php
 
-
-	include('themes.php');	
+	include('../themes.php');	
 
 	$theme 		= $themes[$_GET['t']];
-	$message 	= $_GET['m'];
+	$message 	= fixURL($_GET['m']);
 
 	$dir		= '../theme/' . $theme . '/';
 
@@ -20,6 +19,13 @@
 		header('Location: ../error/no-theme.php?m=' . $message);
 	}
 
+	function fixURL($target) {
+		// $_GET['m'];
+		// $z = str_replace("\\\\\\\\\\\\\'", "'", $_GET['m']); //%0
+		$target = str_replace("\\\\\\\\\\\\\'", "'", $target);
+		$target = str_replace("\\\\\\\\\\\\\\\"", '"', $target);
+		return $target;
+	}
 
 ?><!DOCTYPE html>
 <html>

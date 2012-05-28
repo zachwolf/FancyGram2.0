@@ -1,0 +1,21 @@
+@mixin font($fs, $lh, $ff) {
+	font: #{remtopx($fs)}/#{remtopx($lh)} $ff;
+	font: #{$fs}/#{$lh} $ff;
+}
+
+@mixin font-size($fs){
+	font-size: remtopx($fs);
+	font-size: $fs;
+}
+
+@mixin line-height($lh){
+	line-height: remtopx($lh);
+	line-height: $lh;
+}
+
+@mixin transformThis($angle: 3.5deg) {
+	-webkit-transform: rotate(#{$angle});
+	-moz-transform: rotate(#{$angle});
+	-o-transform: rotate(#{$angle});
+	-webkit-backface-visibility: hidden;
+}

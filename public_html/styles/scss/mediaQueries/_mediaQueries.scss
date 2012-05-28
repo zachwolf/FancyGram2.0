@@ -1,0 +1,20 @@
+@import "retina";
+@import "400";
+
+@media screen and (max-width: 600px) {
+	body {
+		background: url("/img/desktop-600.png") top center no-repeat;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		background: url("/img/desktop-800.png") top center no-repeat;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	body {
+		background: url("/img/desktop-1000.png") top center no-repeat;
+	}
+}

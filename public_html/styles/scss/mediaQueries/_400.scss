@@ -1,0 +1,24 @@
+@media screen and (max-width: 450px) {
+	.body-wrap {
+		margin: 54px 5px;
+		padding: 24px 10px; // 98/940\
+	}
+
+	body {
+		background: url("/img/desktop-400.png") top center no-repeat;
+
+		.form-btns {
+
+			li {
+				width: 100%;
+				float: none;
+				margin-bottom: 27px;
+
+				.sys-btn {
+					width: 100% !important;
+					margin: 0 !important;
+				}
+			}
+		}
+	}
+}

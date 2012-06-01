@@ -170,6 +170,11 @@ legend {
 	a {
 		padding: 5.5900621%; // 9 /161
 		display: block;
+
+		&:active {
+			background-color: transparent !important;
+			opacity: .9;
+		}
 	}
 
 	img {

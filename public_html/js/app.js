@@ -99,19 +99,6 @@
 		console.log($target);
 	}
 
-	var $slidesShowBy 	= 	"slides",
-		$slidesOptns	= 	$('.theme-sorting-options a');
-
-	function toggleThemeView($target) {
-		if($target.hasClass("active")) return;
-
-		$.each($slidesOptns, function( k, v){
-			$(this).toggleClass("active");
-		});
-		console.log($target);
-	}
-
-
 	if($("html").hasClass("touch")){
 
 		var $idsArr 		= [],
@@ -130,10 +117,6 @@
 			if($target.find(".faux-radio").length >= 1) {
 				new MBP.fastButton(target, function() {
 					switchRadio($target);
-				});
-			} else if($target.parents(".theme-sorting-options").length  >= 1) {
-				new MBP.fastButton(target, function() {
-					toggleThemeView($target);
 				});
 			}
 		});
@@ -156,14 +139,6 @@
 				}
 			}
 		}	
-
-
 	}
-
-	$('.theme-sorting-options').on("click", "a", function(){
-		$target = $(this);
-
-		toggleThemeView($target)
-	});
 		
 })(jQuery);

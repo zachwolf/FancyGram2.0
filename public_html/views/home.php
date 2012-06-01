@@ -55,6 +55,7 @@
 	<!-- <link rel="stylesheet" type="text/css" href="/styles/css/media.css" />	 -->
 
 	<script src="/js/libs/modernizr-2.5.3.min.js"></script>
+
 </head>
 <!--[if lt IE 7]> <body class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>    <body class="lt-ie9 lt-ie8"> <![endif]-->
@@ -86,16 +87,16 @@
 						</div>
 					</fieldset>
 					<fieldset>
-						<div class="headline-wrap">
+						<div id="themes" class="headline-wrap">
 							<legend>Theme:</legend>
-							<ul class="theme-sorting-options">
+							<!-- <ul class="theme-sorting-options">
 								<li>
 									<a href="#slides" id="slides-view" class="sys-btn icon-btn fast-btn active">slides</a>
 								</li>
 								<li>
 									<a href="#grid" id="grid-view" class="sys-btn icon-btn fast-btn">grid</a>
 								</li>
-							</ul>
+							</ul> -->
 						</div>
 						<ul class="thumbs">
 						<?php 
